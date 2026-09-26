@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>Notetaker</title>
+    </head>
+    <body>
+        <h1><a href="/">Notetaker</a></h1>
+        <a href="{% url 'logout' %}">logout</a>
+        <form method=post >{% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">save</button>
+        </form>
+    </body>
+</html>
